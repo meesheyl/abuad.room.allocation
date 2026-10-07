@@ -1,0 +1,517 @@
+/* =================================
+   BASIC SETTINGS
+================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+
+    margin: 0;
+
+    background: white;
+
+    color: #111;
+
+    font-family:
+        "Times New Roman",
+        Times,
+        serif;
+
+}
+
+
+
+/* =================================
+   PRINT BUTTON
+================================= */
+
+.toolbar {
+
+    width: 660px;
+
+    margin: 8px auto 0;
+
+}
+
+
+.toolbar button {
+
+    border: none;
+
+    background: #e8e8e8;
+
+    border-radius: 20px;
+
+    padding: 3px 13px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 12px;
+
+    cursor: pointer;
+
+}
+
+
+.toolbar button:hover {
+
+    background: #dcdcdc;
+
+}
+
+
+
+/* =================================
+   MAIN PAGE
+================================= */
+
+.sheet {
+
+    width: 660px;
+
+    min-height: 1050px;
+
+    margin: 0 auto;
+
+    padding-top: 32px;
+
+    position: relative;
+
+}
+
+
+
+/* =================================
+   UNIVERSITY HEADER
+================================= */
+
+.university-header {
+
+    height: 70px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 27px;
+
+}
+
+
+
+/* University logo */
+
+.logo {
+
+    width: 58px;
+
+    height: 58px;
+
+    object-fit: contain;
+
+}
+
+
+
+/* University name */
+
+.university-name {
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 25px;
+
+    font-weight: bold;
+
+    line-height: 1;
+
+    color: #5b1515;
+
+}
+
+
+.university-name span {
+
+    display: block;
+
+    color: #222;
+
+    font-size: 15px;
+
+    font-weight: normal;
+
+    font-style: italic;
+
+    letter-spacing: 7px;
+
+    margin-top: 5px;
+
+    text-align: center;
+
+}
+
+
+
+/* =================================
+   BLUE TITLE BANNER
+================================= */
+
+.banner {
+
+    width: 100%;
+
+    height: 83px;
+
+    background: #c5d8ef;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 52px;
+
+}
+
+
+.banner h1 {
+
+    margin: 0;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 23px;
+
+    font-weight: 700;
+
+    text-align: center;
+
+}
+
+
+
+/* =================================
+   TABLE
+================================= */
+
+table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    table-layout: fixed;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+td,
+th {
+
+    border: 1px solid #333;
+
+    height: 50px;
+
+    padding: 8px 14px;
+
+    font-family:
+        "Times New Roman",
+        Times,
+        serif;
+
+    font-size: 15px;
+
+    vertical-align: middle;
+
+}
+
+
+th {
+
+    text-align: right;
+
+    font-weight: bold;
+
+    width: 21%;
+
+}
+
+
+td {
+
+    text-align: left;
+
+    width: 25%;
+
+}
+
+
+
+/* =================================
+   PERSONAL DETAILS
+================================= */
+
+.personal {
+
+    width: 21%;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    line-height: 1.25;
+
+    text-align: left;
+
+    padding-left: 14px;
+
+}
+
+
+
+/* =================================
+   PHOTO
+================================= */
+
+.photo-cell {
+
+    width: 25%;
+
+    text-align: center;
+
+    padding: 0;
+
+}
+
+
+.photo {
+    width: 95px;
+    height: 95px;
+    margin: 0 auto;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+
+/* =================================
+   HOSTEL INFORMATION
+================================= */
+
+.hostel-information {
+
+    width: 54%;
+
+    text-align: center;
+
+    padding: 10px;
+
+}
+
+
+.allocated {
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    margin-bottom: 17px;
+
+}
+
+
+.hostel-title {
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+}
+
+/* =================================
+   WATERMARK
+================================= */
+
+.sheet::after {
+
+    content: "";
+
+    position: absolute;
+
+    z-index: 1;
+
+    left: 50%;
+
+    top: 63%;
+
+    width: 360px;
+
+    height: 430px;
+
+    transform: translate(-50%, -50%);
+
+    background-image: url("logo.png");
+
+    background-repeat: no-repeat;
+
+    background-position: center;
+
+    background-size: contain;
+
+    opacity: 0.10;
+
+    pointer-events: none;
+
+}
+
+
+
+/* =================================
+   APPROVAL & DATE
+================================= */
+
+.approval {
+
+    width: 335px;
+
+    margin: 120px auto 0;
+
+    border-top: 1px solid #222;
+
+    text-align: center;
+
+    padding-top: 14px;
+
+    font-size: 21px;
+
+    font-weight: bold;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 700px) {
+
+    .toolbar {
+
+        width: calc(100% - 30px);
+
+    }
+
+
+    .sheet {
+
+        width: calc(100% - 30px);
+
+        padding-top: 20px;
+
+    }
+
+
+    .banner h1 {
+
+        font-size: 18px;
+
+    }
+
+
+    td,
+    th {
+
+        font-size: 12px;
+
+        padding: 7px;
+
+    }
+
+
+    .personal {
+
+        font-size: 15px;
+
+    }
+
+
+    .hostel-title {
+
+        font-size: 15px;
+
+    }
+
+
+    .university-name {
+
+        font-size: 19px;
+
+    }
+
+
+    .university-name span {
+
+        font-size: 11px;
+
+        letter-spacing: 4px;
+
+    }
+
+}
+
+
+
+/* =================================
+   PRINT
+================================= */
+
+@media print {
+
+    body {
+
+        margin: 0;
+
+        background: white;
+
+    }
+
+
+    .toolbar {
+
+        display: none;
+
+    }
+
+
+    .sheet {
+
+        margin: 0 auto;
+
+    }
+
+}
